@@ -1,7 +1,7 @@
 function enviarPedido() {
-    const limon = document.getElementById('limon').value;
-    const grosella = document.getElementById('grosella').value;
-    const tamarindo = document.getElementById('tamarindo').value;
+    const limon = parseInt(document.getElementById('limon').value);
+    const grosella = parseInt(document.getElementById('grosella').value);
+    const tamarindo = parseInt(document.getElementById('tamarindo').value);
 
     const total = (limon * 3.5) + (grosella * 3.5) + (tamarindo * 3.5);
 
@@ -16,11 +16,12 @@ function enviarPedido() {
     document.getElementById('resumenPedido').innerHTML = resumen;
     document.getElementById('resumenPedido').style.display = 'block';
 
-    enviarEmail(limon, grosella, tamarindo, total);
+    // Aquí puedes llamar a la función enviarEmail() si deseas enviar un correo electrónico al hacer clic en el botón de enviar pedido
 }
 
+// Esta función enviarEmail() se encarga de enviar un correo electrónico con el resumen del pedido
 function enviarEmail(limon, grosella, tamarindo, total) {
-    const mailto = `mailto:gabriangel015@gmail.com?subject=Nuevo%20Pedido&body=
+    const mailto = `mailto:tuemail@example.com?subject=Nuevo%20Pedido&body=
         Pedido de Paletas:
         %0ALimón: ${limon} ($${(limon * 3.5).toFixed(2)})
         %0AGrosella: ${grosella} ($${(grosella * 3.5).toFixed(2)})
