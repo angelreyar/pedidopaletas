@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Paletas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pedido de Paletas</h1>
+        <form id="pedidoForm">
+            <label for="limon">Limón ($3.50):</label>
+            <input type="number" id="limon" name="limon" min="0" value="0">
+            <br>
+            <label for="grosella">Grosella ($3.50):</label>
+            <input type="number" id="grosella" name="grosella" min="0" value="0">
+            <br>
+            <label for="tamarindo">Tamarindo ($3.50):</label>
+            <input type="number" id="tamarindo" name="tamarindo" min="0" value="0">
+            <br>
+            <button type="button" onclick="enviarPedido()">Enviar Pedido</button>
+        </form>
+        <div id="resumenPedido"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
